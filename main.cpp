@@ -30,18 +30,22 @@ void swap(int* a, int* b){
 	*a = number1;
 }
 
+void swap2(int* a, int* b){
+	int temp = *a;
+	*a = *b;
+	*b = temp;}
+
 void swap2(int number1, int number2){
 	int number3 = number2;
 	number2 = number1;
-	number1 = number3;
-}
+	number1 = number3;}
+
 
 void showEl_line(int* ar, int size, char del = ' '){
 	for(int i = 0; i < size; i++){
 		std::cout << ar[i] << del;
 	}
-	std::cout << std::endl;
-}
+	std::cout << std::endl;}
 
 void showEl_matrix(const int* ar, int size, int col, char del = ' '){
 	int string = size / col;
@@ -52,35 +56,27 @@ void showEl_matrix(const int* ar, int size, int col, char del = ' '){
 		}
 	std::cout << "\n";
 	}	
-	std::cout << std::endl;
-}
+	std::cout << std::endl;}
+
 
 void SelSort(int size; int ar[size]){
-  3     for(int i = 0; i < size; i++){
-  4         int max = ar[0];
-  5         for(int j = 0; j < size; j++){
-  6             if(max - ar[j] < 0){
-  7                 max = ar[j];
-  8             }
-  9         }
- 10                 int temp = ar[j];
- 11                 ar[j] = ar[0];
- 12                 ar[0] = temp;
- 13                 int br[size - 1];
- 14                 for(int q = 1; q < size - 1; q++){
- 15                     br[i] = ar[q];
- 16                 }
- 17     }
- 18     std::cout <<
- 19 }
+    for(int i = 0; i < size; i++){
+        int max = ar[i];				
+        for(int j = 0; j < size; j++){	
+            if(max - ar[j] < 0){	
+               max = ar[j];			
+			}
+		}
+		int temp = ar[j];
+    	ar[j] = ar[0];
+    	ar[0] = temp;
+	}
+		std::cout << ar << std::endl 
+}
  
 
-int main(int c, char** agv){
-	std::cout << "--------\ntest test\n------" << std::endl;;
-	for (int i = 0; i < c; i++) {
-		std::cout << agv[i] << std::endl;
-	}
-    return 0;
+int main(){
+	
 }
 
 
